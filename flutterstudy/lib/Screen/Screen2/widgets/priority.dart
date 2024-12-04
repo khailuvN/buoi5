@@ -35,7 +35,7 @@ class _PriorityState extends State<Priority> {
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: priorityList.map((priorityButton) {

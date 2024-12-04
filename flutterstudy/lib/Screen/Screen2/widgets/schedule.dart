@@ -11,21 +11,21 @@ class Schedule extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
               Row(
                 children: [
                   Text(
                     title,
-                    style: TextStyle(color: Colors.white, fontSize: 27),
+                    style: const TextStyle(color: Colors.white, fontSize: 27),
                   ),
                 ],
               ),
               const SizedBox(height: 10),
               TextFormField(
                 decoration: InputDecoration(
-                  label: const Text('Name'),
+                  labelText: 'Name',
                   labelStyle: const TextStyle(color: Colors.white, fontSize: 19),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
@@ -33,6 +33,7 @@ class Schedule extends StatelessWidget {
                   ),
                   filled: true,
                   fillColor: AppColors.hex181818,
+                  floatingLabelBehavior: FloatingLabelBehavior.never, // Ẩn label khi nhập
                 ),
               ),
               const SizedBox(height: 10),
@@ -55,9 +56,10 @@ class Schedule extends StatelessWidget {
                       vertical: 16,
                       horizontal: 12,
                     ),
+                    floatingLabelBehavior: FloatingLabelBehavior.never, // Ẩn label khi nhập
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

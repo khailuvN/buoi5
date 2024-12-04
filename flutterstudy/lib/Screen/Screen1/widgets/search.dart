@@ -11,6 +11,7 @@ class Search extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: TextFormField(
         decoration: InputDecoration(
+          floatingLabelBehavior: FloatingLabelBehavior.never,
           filled: true,
           fillColor: AppColors.hex181818,
           prefixIcon: const Icon(Icons.search, color: Colors.white, size: 19),

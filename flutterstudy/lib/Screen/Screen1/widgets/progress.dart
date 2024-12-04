@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../model/color_model.dart';
 
-
 class Task {
   final String name;
   final bool completed;
@@ -14,8 +13,7 @@ class Progress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    const double progressValue = 0.66;
+    const double progressValue = 0.66; // Giá trị tiến trình (66%)
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -64,14 +62,33 @@ class Progress extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 6),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: const LinearProgressIndicator(
-              value: progressValue,
-              backgroundColor: Color(0xFFD8BFD8),
-              color: AppColors.hexBA83DE,
-              minHeight: 20.0,
-            ),
+
+          Stack(
+            children: [
+
+              Container(
+                height: 20.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: const Color(0xFFD8BFD8),
+                    width: 2,
+                  ),
+                  color: const Color(0xFFD8BFD8), // Màu nền
+                ),
+              ),
+
+              FractionallySizedBox(
+                widthFactor: progressValue,
+                child: Container(
+                  height: 20.0,
+                  decoration: BoxDecoration(
+                    color: AppColors.hexBA83DE,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

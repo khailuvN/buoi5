@@ -13,7 +13,7 @@ class Times extends StatelessWidget {
         children: [
           Container(
             height: 77,
-            width: 185,
+            width: 180,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -36,7 +36,7 @@ class Times extends StatelessWidget {
                     child: const Row(
                       children: [
                         Icon(Icons.access_time, color: AppColors.hexBA83DE),
-                        SizedBox(width: 5),
+                        SizedBox(width: 10),
                         Text(
                           '06 : 00 PM',
                           style: TextStyle(color: Colors.white, fontSize: 20),
@@ -50,7 +50,7 @@ class Times extends StatelessWidget {
 
           Container(
             height: 77,
-            width: 185,
+            width: 180,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -73,7 +73,7 @@ class Times extends StatelessWidget {
                     child: const Row(
                       children: [
                         Icon(Icons.access_time, color: AppColors.hexBA83DE),
-                        SizedBox(width: 5),
+                        SizedBox(width: 10),
                         Text(
                           '06 : 00 PM',
                           style: TextStyle(color: Colors.white, fontSize: 20),

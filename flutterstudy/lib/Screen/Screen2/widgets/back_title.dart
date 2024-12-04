@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterstudy/Screen/Screen1/model/color_model.dart';
 
@@ -28,14 +27,14 @@ class BackTitle extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back, color: Colors.white),
                   ),
                 ),
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.2,
               ),
-              Text(
+              const Text(
                 'Create new task',
                 style: TextStyle(fontSize: 23, color: Colors.white),
               ),
